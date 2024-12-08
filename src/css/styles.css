@@ -1,0 +1,265 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input,
+select {
+    margin: 5px 0;
+    padding: 8px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #007BFF; /* Destaque ao focar no campo */
+    outline: none;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-size: 16px; /* Ajustando o tamanho da fonte para torná-lo mais legível */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra para destacar o foco */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de compressão ao clicar */
+}
+
+/* Layout das tabelas */
+#tablesContainer {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#tablesContainer > div {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #tablesContainer > div {
+        flex: 1 1 100%;
+    }
+
+    button {
+        width: 100%; /* Tornar os botões mais largos em telas pequenas */
+        padding: 10px;
+        font-size: 18px; /* Aumenta o tamanho da fonte em telas menores */
+    }
+}
+
+/* Estilização das tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+table td {
+    text-align: left;
+}
+
+/* Estilização dos botões de ação */
+table td button {
+    padding: 6px 12px; /* Botões menores */
+    margin-right: 8px; /* Espaçamento entre os botões */
+    background-color: #007BFF; /* Cor de fundo para o botão Editar */
+    color: white;
+    border: 2px solid #007BFF; /* Borda azul ao redor do botão */
+    cursor: pointer;
+    border-radius: 10px; /* Borda arredondada maior */
+    font-size: 12px; /* Tamanho de fonte reduzido */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Sombra sutil */
+}
+
+/* Botão Editar */
+table td button.edit-btn {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+/* Botão Apagar */
+table td button.delete-btn {
+    background-color: #DC3545; /* Cor do botão Apagar (vermelho) */
+    border-color: #DC3545;
+}
+
+/* Efeito de hover para ambos os botões */
+table td button:hover {
+    transform: translateY(-2px); /* Efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Efeito de foco para os botões */
+table td button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6); /* Sombra ao focar no botão */
+    border-radius: 12px;
+}
+
+/* Efeito de clique (botão ativo) */
+table td button:active {
+    transform: scale(0.96); /* Efeito de compressão leve ao clicar */
+}
+
+/* Quando o botão estiver desabilitado */
+table td button:disabled {
+    background-color: #ccc; /* Cor para botões desabilitados */
+    cursor: not-allowed;
+}
+
+/* Input de texto */
+input[type="text"] {
+    padding: 5px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilização de contagem */
+#calcularPresenca {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calcularPresenca:hover {
+    background-color: #218838;
+}
+
+#totalPresenca {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007BFF;
+    text-align: center;
+}
+
+/* Estilo dos títulos das categorias */
+#tablesContainer h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 5px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-top: 0;
+}
+
+#tablesContainer p {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilo de contagem de membros (geral e presentes) */
+h3#totalCount,
+h3#totalPresentCount {
+    text-align: center;
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 30px;
+}
+
+#familyCount,
+#childrenCount,
+#friendsCount,
+#familyPresentCount,
+#childrenPresentCount,
+#friendsPresentCount {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Estilo específico para o checkbox */
+input[type="checkbox"] {
+    width: 20px; /* Tamanho do checkbox */
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: white;
+    border: 2px solid #ccc; /* Borda de cor neutra */
+    border-radius: 4px;
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transição suave */
+}
+
+/* Quando o checkbox estiver marcado */
+input[type="checkbox"]:checked {
+    background-color: #28a745; /* Cor de fundo quando marcado */
+    border-color: #28a745; /* Cor da borda quando marcado */
+}
+
+/* Melhorando a visibilidade do checkbox ao foco */
+input[type="checkbox"]:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}

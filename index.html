@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de convidados</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+    <h1>Lista de Convidados</h1>
+
+    <form id="familyForm">
+        <label for="category">Categoria:</label>
+        <select id="category" required>
+            <option value="">Selecione</option>
+            <option value="family">Família</option>
+            <option value="children">Crianças</option>
+            <option value="friends">Amigos</option>
+        </select>
+
+        <label for="member">Nome do Membro:</label>
+        <input type="text" id="member" placeholder="Ex: João" required>
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Lista Organizada</h2>
+    <div id="familiesContainer">
+        <div id="tablesContainer">
+            <!-- Família -->
+            <div>
+                <h3>Família</h3>
+                <p>Total: <span id="familyCount">0</span> | Presentes: <span id="familyPresentCount">0</span></p>
+                <table id="familyTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Presença</th> <!-- Coluna de presença com checkbox -->
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados da Família serão adicionados dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Crianças -->
+            <div>
+                <h3>Crianças</h3>
+                <p>Total: <span id="childrenCount">0</span> | Presentes: <span id="childrenPresentCount">0</span></p>
+                <table id="childrenTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Presença</th> <!-- Coluna de presença com checkbox -->
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados das Crianças serão adicionados dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Amigos -->
+            <div>
+                <h3>Amigos</h3>
+                <p>Total: <span id="friendsCount">0</span> | Presentes: <span id="friendsPresentCount">0</span></p>
+                <table id="friendsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Presença</th> <!-- Coluna de presença com checkbox -->
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados dos Amigos serão adicionados dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <h3>Total de pessoas (geral): <span id="totalCount">0</span></h3>
+    <h3>Total de presentes (geral): <span id="totalPresentCount">0</span></h3>
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
